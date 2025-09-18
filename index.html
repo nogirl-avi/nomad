@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>kiwikim</title>
+  <meta name="description" content="kiwicrieskiwiwi"/>
+
+  <!-- 나눔명조 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --fg: #111;
+      --maxw: 56rem;                 /* 본문 줄길이 조금 줄여 가독성 ↑ */
+      --pad: clamp(16px, 2.5vw, 32px);
+      --gutter: clamp(20px, 12vw, 200px); /* ✅ 좌우 여백(가터) 크게 */
+    }
+    *{ box-sizing: border-box; }
+
+    html, body{
+      height: 100%;
+      margin: 0;
+      background-image: url('2.png');
+      background-position: center top;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    body{
+      color: var(--fg);
+      font-family: 'Nanum Myeongjo', serif;
+      line-height: 1.75;
+    }
+
+    /* 히어로(타이틀) */
+    .hero{
+      padding-top: calc(var(--pad) * 2);
+      padding-bottom: var(--pad);
+      background: transparent;
+    }
+    /* ✅ 타이틀도 본문과 동일 폭/가터 사용 */
+    .hero > div{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding-inline: var(--gutter);
+      text-align: left;
+    }
+
+    h1{
+      margin: 0 0 .6em 0;
+      font-weight: 800;
+      font-size: clamp(2rem, 6vw, 6rem);
+      letter-spacing: -0.01em;
+    }
+
+    /* 본문 컨테이너 */
+    .section{
+      padding: var(--pad) 0;          /* 상하만 주고, 좌우는 가터로 */
+      max-width: var(--maxw);
+      margin: 0 auto;
+      background: transparent;
+      padding-inline: var(--gutter);  /* ✅ 좌우 여백 크게 */
+    }
+
+    .card{
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+    }
+
+    h2{ margin: 0 0 .6em 0; font-size: clamp(1.25rem, 3.2vw, 2rem); font-weight: 700; }
+    p{ margin: .8em 0; }
+    a{ color: inherit; text-decoration: underline; }
+
+    /* 넓은 화면에서 가터를 조금 더 키우고 싶으면 여기 값만 손대면 됨 */
+    @media (min-width: 1200px){
+      :root{ --gutter: clamp(24px, 14vw, 280px); }
+    }
+
+    /* 줄바꿈(엔터) 그대로 반영 */
+.poem { white-space: pre-line; }
+
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <h1>노마드</h1>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="card">
+      <p class="poem">
+나 귀신을 봐
+도망다니는 것인지 쫓아오는 것인지 모르겠어
+아침이면 바닥에 가득한 날개들을 쓸어냈다
+
+갈래갈래 찢어진 우산을 어깨에 멘다
+코바, 왜 내 죽음을 필요로 하지? 
+(스탈린에게 보내는 부하린의 편지, 주석으로 달 것)
+걸음은 벗어날 수 없다는 것을 알았을 때 시작됐어
+몇 번의 오프로드를 지났다
+쪼그려 자고 나면 한 쪽 볼에 가득 요철이 생겼지
+
+
+
+</p>
+
+    </div>
+  </main>
+</body>
+</html>
