@@ -89,6 +89,22 @@
 
     /* 엔터 줄바꿈 */
     .poem { white-space: pre-line; }
+    /* 데스크탑 배경 */
+html{
+  min-height:100%;
+  background: url('2.png?v=2') center top / cover no-repeat; /* ← v=2 추가 */
+}
+
+/* 모바일 전환 */
+@media (max-width: 1024px), (hover:none) and (pointer:coarse), (orientation: portrait){
+  html{
+    background-image: url('3.png?v=2') !important;         /* ← v=2 추가 */
+    background-position: center top !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+}
+
   </style>
 </head>
 <body>
